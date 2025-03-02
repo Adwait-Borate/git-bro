@@ -3,7 +3,7 @@
 <div align="center">
 
 [![NPM version](https://img.shields.io/npm/v/git-bro.svg)](https://www.npmjs.com/package/git-bro)
-[![License](https://img.shields.io/npm/l/git-bro.svg)](https://github.com/Adwait-Borate/git-bro/blob/master/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Downloads](https://img.shields.io/npm/dm/git-bro.svg)](https://www.npmjs.com/package/git-bro)
 [![GitHub issues](https://img.shields.io/github/issues/Adwait-Borate/git-bro.svg)](https://github.com/Adwait-Borate/git-bro/issues)
 [![GitHub stars](https://img.shields.io/github/stars/Adwait-Borate/git-bro.svg)](https://github.com/Adwait-Borate/git-bro/stargazers)
