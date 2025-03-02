@@ -1,12 +1,12 @@
-# Git-ripper
+# Git-master
 
 <div align="center">
 
-[![NPM version](https://img.shields.io/npm/v/git-ripper.svg)](https://www.npmjs.com/package/git-ripper)
-[![License](https://img.shields.io/npm/l/git-ripper.svg)](https://github.com/sairajB/git-ripper/blob/main/LICENSE)
-[![Downloads](https://img.shields.io/npm/dm/git-ripper.svg)](https://www.npmjs.com/package/git-ripper)
-[![GitHub issues](https://img.shields.io/github/issues/sairajB/git-ripper.svg)](https://github.com/sairajB/git-ripper/issues)
-[![GitHub stars](https://img.shields.io/github/stars/sairajB/git-ripper.svg)](https://github.com/sairajB/git-ripper/stargazers)
+[![NPM version](https://img.shields.io/npm/v/git-master.svg)](https://www.npmjs.com/package/git-master)
+[![License](https://img.shields.io/npm/l/git-master.svg)](https://github.com/Adwait-Borate/git-master/blob/main/LICENSE)
+[![Downloads](https://img.shields.io/npm/dm/git-master.svg)](https://www.npmjs.com/package/git-master)
+[![GitHub issues](https://img.shields.io/github/issues/Adwait-Borate/git-master.svg)](https://github.com/Adwait-Borate/git-master/issues)
+[![GitHub stars](https://img.shields.io/github/stars/Adwait-Borate/git-master.svg)](https://github.com/Adwait-Borate/git-master/stargazers)
 
 **Download specific folders from GitHub repositories without cloning the entire codebase**
 
@@ -21,9 +21,9 @@
 
 </div>
 
-## Why Git-ripper?
+## Why Git-master?
 
-Have you ever needed just a single component from a massive repository? Or wanted to reference a specific configuration directory without downloading gigabytes of code? Git-ripper solves this problem by letting you extract and download only the folders you need, saving bandwidth, time, and disk space.
+Have you ever needed just a single component from a massive repository? Or wanted to reference a specific configuration directory without downloading gigabytes of code? Git-master solves this problem by letting you extract and download only the folders you need, saving bandwidth, time, and disk space.
 
 ## Features
 
@@ -40,31 +40,31 @@ Have you ever needed just a single component from a massive repository? Or wante
 ### Global Installation (Recommended)
 
 ```bash
-npm install -g git-ripper
+npm install -g git-master
 ```
 
-This installs Git-ripper as a global command-line tool accessible from anywhere in your terminal.
+This installs Git-master as a global command-line tool accessible from anywhere in your terminal.
 
 ### On-demand Usage
 
 ```bash
-npx git-ripper <github-folder-url>
+npx git-master <github-folder-url>
 ```
 
-Run Git-ripper directly without installation using `npx`.
+Run Git-master directly without installation using `npx`.
 
 ## Usage
 
 ### Basic Command
 
 ```bash
-git-ripper https://github.com/username/repository/tree/branch/folder
+git-master https://github.com/username/repository/tree/branch/folder
 ```
 
 ### With Custom Output Directory
 
 ```bash
-git-ripper https://github.com/username/repository/tree/branch/folder -o ./my-output-folder
+git-master https://github.com/username/repository/tree/branch/folder -o ./my-output-folder
 ```
 
 ### Command Line Options
@@ -79,7 +79,6 @@ git-ripper https://github.com/username/repository/tree/branch/folder -o ./my-out
 
 | Command                    | Description                                      |
 | -------------------------- | ------------------------------------------------ |
-| `download [options] <url>` | Download a specific folder from a GitHub repository |
 | `insights [options] <repo>`| Generate detailed insights for a GitHub repository |
 | `audit [options] <repo>`   | Audit dependencies in a GitHub repository        |
 | `commits [options] <repo>` | Explore commit history of a GitHub repository    |
@@ -91,61 +90,61 @@ git-ripper https://github.com/username/repository/tree/branch/folder -o ./my-out
 
 ```bash
 # Download React DOM package
-git-ripper https://github.com/facebook/react/tree/main/packages/react-dom
+git-master https://github.com/facebook/react/tree/main/packages/react-dom
 ```
 
 ### Get Configuration Files
 
 ```bash
 # Extract VS Code build configuration
-git-ripper https://github.com/microsoft/vscode/tree/main/build -o ./vscode-build-config
+git-master https://github.com/microsoft/vscode/tree/main/build -o ./vscode-build-config
 ```
 
 ### Download Documentation
 
 ```bash
 # Get Node.js documentation
-git-ripper https://github.com/nodejs/node/tree/main/doc -o ./node-docs
+git-master https://github.com/nodejs/node/tree/main/doc -o ./node-docs
 ```
 
 ### Copy UI Templates
 
 ```bash
 # Extract Tailwind components
-git-ripper https://github.com/tailwindlabs/tailwindcss/tree/master/src/components -o ./tailwind-components
+git-master https://github.com/tailwindlabs/tailwindcss/tree/master/src/components -o ./tailwind-components
 ```
 
 ### Generate Project Folder Structure
 
 ```bash
 # Generate a project folder structure
-git-ripper generate
+git-master generate
 ```
 
 ### Generate Insights for a Repository
 
 ```bash
 # Generate insights for a repository
-git-ripper insights username/repository
+git-master insights username/repository
 ```
 
 ### Audit Dependencies in a Repository
 
 ```bash
 # Audit dependencies in a repository
-git-ripper audit username/repository
+git-master audit username/repository
 ```
 
 ### Explore Commit History
 
 ```bash
 # Explore commit history of a repository
-git-ripper commits username/repository
+git-master commits username/repository
 ```
 
 ## How It Works
 
-Git-ripper operates in four stages:
+Git-master operates in four stages:
 
 1. **URL Parsing**: Extracts repository owner, name, branch, and target folder path
 2. **API Request**: Uses GitHub's API to fetch the folder structure
@@ -154,7 +153,7 @@ Git-ripper operates in four stages:
 
 ## Configuration
 
-Git-ripper works out of the box without configuration. For rate-limited GitHub API usage, authentication support is under development.
+Git-master works out of the box without configuration. For rate-limited GitHub API usage, authentication support is under development.
 
 ## Troubleshooting
 
@@ -186,7 +185,7 @@ Error: Path not found in repository
 
 ## Contributing
 
-Contributions make the open-source community an amazing place to learn, inspire, and create. Any contributions to Git-ripper are **greatly appreciated**.
+Contributions make the open-source community an amazing place to learn, inspire, and create. Any contributions to Git-master are **greatly appreciated**.
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
@@ -194,7 +193,7 @@ Contributions make the open-source community an amazing place to learn, inspire,
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-See the [open issues](https://github.com/sairajB/git-ripper/issues) for a list of proposed features and known issues.
+See the [open issues](https://github.com/Adwait-Borate/git-master/issues) for a list of proposed features and known issues.
 
 ## Roadmap
 
@@ -217,7 +216,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <div align="center">
-<p>Made with ❤️ by <a href="https://github.com/sairajB">sairajB</a></p>
-<p>If you find this tool useful, consider <a href="https://github.com/sponsors/sairajB">sponsoring</a> its development</p>
+<p>Made with ❤️ by <a href="https://github.com/Adwait-Borate">Adwait-Borate</a> and <a href="https://github.com/ShreyashIngle">ShreyashIngle</a></p>
+<p>If you find this tool useful, consider <a href="https://github.com/sponsors/Adwait-Borate">sponsoring</a> its development</p>
 </div>
-
