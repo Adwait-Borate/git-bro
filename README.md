@@ -1,12 +1,12 @@
-# Git-master
+# git-bro
 
 <div align="center">
 
-[![NPM version](https://img.shields.io/npm/v/git-master.svg)](https://www.npmjs.com/package/git-master)
-[![License](https://img.shields.io/npm/l/git-master.svg)](https://github.com/Adwait-Borate/git-master/blob/main/LICENSE)
-[![Downloads](https://img.shields.io/npm/dm/git-master.svg)](https://www.npmjs.com/package/git-master)
-[![GitHub issues](https://img.shields.io/github/issues/Adwait-Borate/git-master.svg)](https://github.com/Adwait-Borate/git-master/issues)
-[![GitHub stars](https://img.shields.io/github/stars/Adwait-Borate/git-master.svg)](https://github.com/Adwait-Borate/git-master/stargazers)
+[![NPM version](https://img.shields.io/npm/v/git-bro.svg)](https://www.npmjs.com/package/git-bro)
+[![License](https://img.shields.io/npm/l/git-bro.svg)](https://github.com/Adwait-Borate/git-bro/blob/main/LICENSE)
+[![Downloads](https://img.shields.io/npm/dm/git-bro.svg)](https://www.npmjs.com/package/git-bro)
+[![GitHub issues](https://img.shields.io/github/issues/Adwait-Borate/git-bro.svg)](https://github.com/Adwait-Borate/git-bro/issues)
+[![GitHub stars](https://img.shields.io/github/stars/Adwait-Borate/git-bro.svg)](https://github.com/Adwait-Borate/git-bro/stargazers)
 
 **Get detailed insights for GitHub repositories without cloning the entire codebase**
 
@@ -21,9 +21,9 @@
 
 </div>
 
-## Why Git-master?
+## Why git-bro?
 
-Have you ever needed detailed insights for a GitHub repository? Or wanted to audit dependencies, explore commit history, or analyze project metadata without downloading the entire codebase? Git-master solves these problems by providing specific commands to generate insights, audit dependencies, explore commits, and generate project folder structures, saving you bandwidth, time, and disk space.
+Have you ever needed detailed insights for a GitHub repository? Or wanted to audit dependencies, explore commit history, or analyze project metadata without downloading the entire codebase? git-bro solves these problems by providing specific commands to generate insights, audit dependencies, explore commits, and generate project folder structures, saving you bandwidth, time, and disk space.
 
 ## Features
 
@@ -37,18 +37,18 @@ Have you ever needed detailed insights for a GitHub repository? Or wanted to aud
 ### Global Installation (Recommended)
 
 ```bash
-npm install -g git-master
+npm install -g git-bro
 ```
 
-This installs Git-master as a global command-line tool accessible from anywhere in your terminal.
+This installs git-bro as a global command-line tool accessible from anywhere in your terminal.
 
 ### On-demand Usage
 
 ```bash
-npx git-master <github-repo-url>
+npx git-bro <github-repo-url>
 ```
 
-Run Git-master directly without installation using `npx`.
+Run git-bro directly without installation using `npx`.
 
 ## Command Line Options
 
@@ -89,30 +89,30 @@ Run Git-master directly without installation using `npx`.
 ### Generate Insights for a Repository
 
 ```bash
-git-master insights username/repository
+git-bro insights username/repository
 ```
 
 ### Audit Dependencies in a Repository
 
 ```bash
-git-master audit username/repository
+git-bro audit username/repository
 ```
 
 ### Explore Commit History
 
 ```bash
-git-master commits username/repository
+git-bro commits username/repository
 ```
 
 ### Generate Project Folder Structure
 
 ```bash
-git-master generate
+git-bro generate
 ```
 
 ## Configuration
 
-Git-master works out of the box without configuration. For rate-limited GitHub API usage, authentication support is under development.
+git-bro works out of the box without configuration. For rate-limited GitHub API usage, authentication support is under development.
 
 ## Troubleshooting
 
@@ -144,7 +144,7 @@ Error: Repository not found
 
 ## Contributing
 
-Contributions make the open-source community an amazing place to learn, inspire, and create. Any contributions to Git-master are **greatly appreciated**.
+Contributions make the open-source community an amazing place to learn, inspire, and create. Any contributions to git-bro are **greatly appreciated**.
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
@@ -152,7 +152,7 @@ Contributions make the open-source community an amazing place to learn, inspire,
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-See the [open issues](https://github.com/Adwait-Borate/git-master/issues) for a list of proposed features and known issues.
+See the [open issues](https://github.com/Adwait-Borate/git-bro/issues) for a list of proposed features and known issues.
 
 ## Roadmap
 
