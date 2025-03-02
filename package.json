@@ -1,14 +1,14 @@
 {
-    "name": "git-master",
+    "name": "git-bro",
     "version": "1.1.2",
     "description": "CLI tool that lets you download specific folders from GitHub repositories without cloning the entire repo.",
     "main": "src/index.js",
     "bin": {
-        "git-master": "./bin/git-master.js"
+        "git-bro": "./bin/git-bro.js"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "node bin/git-master.js",
+        "dev": "node bin/git-bro.js",
         "lint": "eslint ."
     },
     "keywords": [
@@ -50,12 +50,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Adwait-Borate/git-master.git"
+        "url": "git+https://github.com/Adwait-Borate/git-bro.git"
     },
     "bugs": {
-        "url": "https://github.com/Adwait-Borate/git-master/issues"
+        "url": "https://github.com/Adwait-Borate/git-bro/issues"
     },
-    "homepage": "https://github.com/Adwait-Borate/git-master",
+    "homepage": "https://github.com/Adwait-Borate/git-bro",
     "engines": {
         "node": ">=14.0.0"
     },
