@@ -8,7 +8,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/Adwait-Borate/git-master.svg)](https://github.com/Adwait-Borate/git-master/issues)
 [![GitHub stars](https://img.shields.io/github/stars/Adwait-Borate/git-master.svg)](https://github.com/Adwait-Borate/git-master/stargazers)
 
-**Download specific folders from GitHub repositories without cloning the entire codebase**
+**Get detailed insights for GitHub repositories without cloning the entire codebase**
 
 [Installation](#installation) •
 [Usage](#usage) •
@@ -23,17 +23,14 @@
 
 ## Why Git-master?
 
-Have you ever needed just a single component from a massive repository? Or wanted to reference a specific configuration directory without downloading gigabytes of code? Git-master solves this problem by letting you extract and download only the folders you need, saving bandwidth, time, and disk space.
+Have you ever needed detailed insights for a GitHub repository? Or wanted to audit dependencies, explore commit history, or analyze project metadata without downloading the entire codebase? Git-master solves these problems by providing specific commands to generate insights, audit dependencies, explore commits, and generate project folder structures, saving you bandwidth, time, and disk space.
 
 ## Features
 
-- **Selective Downloads**: Fetch specific folders instead of entire repositories
-- **Directory Structure**: Preserves complete folder structure
-- **Custom Output**: Specify your preferred output directory
-- **Branch Support**: Works with any branch, not just the default one
-- **Simple Interface**: Clean, intuitive command-line experience
-- **Lightweight**: Minimal dependencies and fast execution
-- **No Authentication**: Works with public repositories without requiring credentials
+- **Generate Insights**: Get detailed insights for a GitHub repository
+- **Audit Dependencies**: Analyze dependencies in a GitHub repository
+- **Explore Commits**: View commit history of a GitHub repository
+- **Generate Structure**: Generate a project folder structure
 
 ## Installation
 
@@ -48,108 +45,70 @@ This installs Git-master as a global command-line tool accessible from anywhere 
 ### On-demand Usage
 
 ```bash
-npx git-master <github-folder-url>
+npx git-master <github-repo-url>
 ```
 
 Run Git-master directly without installation using `npx`.
 
-## Usage
+## Command Line Options
 
-### Basic Command
+| Option          | Description         |
+| --------------- | ------------------- |
+| `-V, --version` | Show version number |
+| `-h, --help`    | Show help           |
 
-```bash
-git-master https://github.com/username/repository/tree/branch/folder
-```
+## Commands
 
-### With Custom Output Directory
+| Command                     | Description                                        |
+| --------------------------- | -------------------------------------------------- |
+| `insights <repo> [options] ` | Generate detailed insights for a GitHub repository |
+| `audit <repo> [options] `    | Audit dependencies in a GitHub repository          |
+| `commits <repo> [options]`  | Explore commit history of a GitHub repository      |
+| `generate`                  | Generate a project folder structure                |
 
-```bash
-git-master https://github.com/username/repository/tree/branch/folder -o ./my-output-folder
-```
+## Commits Feature Options
 
-### Command Line Options
+| Option              | Description                                  |
+| ------------------- | -------------------------------------------- |
+| `-a, --author <author>` | Filter commits by author                     |
+| `-f, --file <file>`      | Filter commits by file path                   |
+| `-c, --conflicts`        | Show only commits with merge conflicts        |
+| `-l, --limit <number>`   | Limit number of commits (default: "50")       |
+| `-h, --help`             | Display help for command                      |
 
-| Option                     | Description              | Default           |
-| -------------------------- | ------------------------ | ----------------- |
-| `-o, --output <directory>` | Specify output directory | Current directory |
-| `-V, --version`            | Show version number      | -                 |
-| `-h, --help`               | Show help                | -                 |
+## Audit Feature Options
 
-### Commands
+| Option              | Description                                  |
+| ------------------- | -------------------------------------------- |
+| `--type <type>`     | Type of dependency file (package.json, requirements.txt) |
+| `--output <path>`   | Output directory for audit reports           |
 
-| Command                    | Description                                      |
-| -------------------------- | ------------------------------------------------ |
-| `insights [options] <repo>`| Generate detailed insights for a GitHub repository |
-| `audit [options] <repo>`   | Audit dependencies in a GitHub repository        |
-| `commits [options] <repo>` | Explore commit history of a GitHub repository    |
-| `generate`                 | Generate a project folder structure              |
 
 ## Examples
-
-### Extract a Component Library
-
-```bash
-# Download React DOM package
-git-master https://github.com/facebook/react/tree/main/packages/react-dom
-```
-
-### Get Configuration Files
-
-```bash
-# Extract VS Code build configuration
-git-master https://github.com/microsoft/vscode/tree/main/build -o ./vscode-build-config
-```
-
-### Download Documentation
-
-```bash
-# Get Node.js documentation
-git-master https://github.com/nodejs/node/tree/main/doc -o ./node-docs
-```
-
-### Copy UI Templates
-
-```bash
-# Extract Tailwind components
-git-master https://github.com/tailwindlabs/tailwindcss/tree/master/src/components -o ./tailwind-components
-```
-
-### Generate Project Folder Structure
-
-```bash
-# Generate a project folder structure
-git-master generate
-```
 
 ### Generate Insights for a Repository
 
 ```bash
-# Generate insights for a repository
 git-master insights username/repository
 ```
 
 ### Audit Dependencies in a Repository
 
 ```bash
-# Audit dependencies in a repository
 git-master audit username/repository
 ```
 
 ### Explore Commit History
 
 ```bash
-# Explore commit history of a repository
 git-master commits username/repository
 ```
 
-## How It Works
+### Generate Project Folder Structure
 
-Git-master operates in four stages:
-
-1. **URL Parsing**: Extracts repository owner, name, branch, and target folder path
-2. **API Request**: Uses GitHub's API to fetch the folder structure
-3. **Content Download**: Retrieves each file individually while maintaining directory structure
-4. **Local Storage**: Saves files to your specified output directory
+```bash
+git-master generate
+```
 
 ## Configuration
 
@@ -173,15 +132,15 @@ Error: Request failed with status code 403
 Error: Invalid GitHub URL format
 ```
 
-**Solution**: Ensure your URL follows the pattern: `https://github.com/owner/repo/tree/branch/folder`
+**Solution**: Ensure your URL follows the pattern: `https://github.com/owner/repo`
 
-#### Folder Not Found
+#### Repository Not Found
 
 ```
-Error: Path not found in repository
+Error: Repository not found
 ```
 
-**Solution**: Verify the folder path exists in the specified branch and repository.
+**Solution**: Verify the repository name and ensure it is accessible.
 
 ## Contributing
 
@@ -201,7 +160,6 @@ See the [open issues](https://github.com/Adwait-Borate/git-master/issues) for a 
 - [ ] Support for GitLab and Bitbucket repositories
 - [ ] Download from specific commits or tags
 - [ ] Dry run mode
-- [ ] File filtering options
 - [ ] CLI interactive mode
 
 ## License
