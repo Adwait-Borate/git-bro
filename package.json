@@ -32,7 +32,7 @@
         "cli",
         "scaffold"
     ],
-    "author": "sairajb",
+    "author": "Adwait-Borate",
     "license": "MIT",
     "dependencies": {
         "axios": "^1.6.7",
@@ -40,7 +40,7 @@
         "chart.js": "^3.9.1",
         "chartjs-node-canvas": "^4.1.6",
         "cli-progress": "^3.12.0",
-        "commander": "^12.0.0",
+        "commander": "^12.1.0",
         "fs-extra": "^11.2.0",
         "inquirer": "^8.2.5",
         "ora": "^5.4.1",
@@ -50,12 +50,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/sairajB/git-master.git"
+        "url": "git+https://github.com/Adwait-Borate/git-master.git"
     },
     "bugs": {
-        "url": "https://github.com/sairajB/git-master/issues"
+        "url": "https://github.com/Adwait-Borate/git-master/issues"
     },
-    "homepage": "https://github.com/sairajB/git-master",
+    "homepage": "https://github.com/Adwait-Borate/git-master",
     "engines": {
         "node": ">=14.0.0"
     },
