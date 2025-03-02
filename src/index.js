@@ -1,24 +1,41 @@
 const { program } = require('commander');
 const { parseGitHubUrl } = require('./parser');
-const { downloadFolder } = require('./downloader');
+const { generateRepoInsights } = require('./insights');
+const { auditDependencies } = require('./dependency-audit');
 const { exploreCommitHistory } = require('./commit-explorer');
 const { createProjectStructure } = require('./project-generator');
 
 const initializeCLI = () => {
   program
     .version('1.1.2')
-    .description('Clone specific folders from GitHub repositories');
+    .description('CLI tool for GitHub repository management');
 
-  // Command for downloading folders
+  // Command for repository insights
   program
-    .command('download <url>')
-    .description('Download a specific folder from a GitHub repository')
-    .option('-o, --output <directory>', 'Output directory', process.cwd())
-    .action(async (url, options) => {
+    .command('insights <repo>')
+    .description('Generate detailed insights for a GitHub repository')
+    .option('-p, --period <period>', 'Time period for analytics (weekly/monthly)', 'monthly')
+    .option('-o, --output <directory>', 'Output directory for reports', process.cwd())
+    .action(async (repo, options) => {
       try {
-        const parsedUrl = parseGitHubUrl(url);
-        await downloadFolder(parsedUrl, options.output);
-        console.log('Folder cloned successfully!');
+        await generateRepoInsights(repo, options);
+        console.log('Repository insights generated successfully!');
+      } catch (error) {
+        console.error('Error:', error.message);
+        process.exit(1);
+      }
+    });
+
+  // Command for dependency audit
+  program
+    .command('audit <repo>')
+    .description('Audit dependencies in a GitHub repository')
+    .option('-t, --type <type>', 'Dependency file type (package.json, requirements.txt)', 'package.json')
+    .option('-o, --output <directory>', 'Output directory for reports', process.cwd())
+    .action(async (repo, options) => {
+      try {
+        await auditDependencies(repo, options);
+        console.log('Dependency audit completed successfully!');
       } catch (error) {
         console.error('Error:', error.message);
         process.exit(1);
@@ -50,26 +67,6 @@ const initializeCLI = () => {
       try {
         await createProjectStructure();
         console.log('Project structure generated successfully!');
-      } catch (error) {
-        console.error('Error:', error.message);
-        process.exit(1);
-      }
-    });
-
-  // Default command (for backward compatibility)
-  program
-    .argument('[url]', 'GitHub URL of the folder to clone')
-    .option('-o, --output <directory>', 'Output directory', process.cwd())
-    .action(async (url, options) => {
-      if (!url) {
-        program.help();
-        return;
-      }
-      
-      try {
-        const parsedUrl = parseGitHubUrl(url);
-        await downloadFolder(parsedUrl, options.output);
-        console.log('Folder cloned successfully!');
       } catch (error) {
         console.error('Error:', error.message);
         process.exit(1);

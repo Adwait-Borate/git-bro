@@ -1,14 +1,14 @@
 {
-    "name": "git-ripper",
+    "name": "git-master",
     "version": "1.1.2",
     "description": "CLI tool that lets you download specific folders from GitHub repositories without cloning the entire repo.",
     "main": "src/index.js",
     "bin": {
-        "git-ripper": "./bin/git-ripper.js"
+        "git-master": "./bin/git-master.js"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "node bin/git-ripper.js",
+        "dev": "node bin/git-master.js",
         "lint": "eslint ."
     },
     "keywords": [
@@ -50,12 +50,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/sairajB/git-ripper.git"
+        "url": "git+https://github.com/sairajB/git-master.git"
     },
     "bugs": {
-        "url": "https://github.com/sairajB/git-ripper/issues"
+        "url": "https://github.com/sairajB/git-master/issues"
     },
-    "homepage": "https://github.com/sairajB/git-ripper",
+    "homepage": "https://github.com/sairajB/git-master",
     "engines": {
         "node": ">=14.0.0"
     },
