@@ -1,70 +1,68 @@
 {
-    "name": "git-bro",
-    "version": "1.1.2",
-    "description": "CLI tool that lets you download specific folders from GitHub repositories without cloning the entire repo.",
-    "main": "src/index.js",
-    "bin": {
-        "git-bro": "./bin/git-bro.js"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "node bin/git-bro.js",
-        "lint": "eslint ."
-    },
-    "keywords": [
-        "git",
-        "clone",
-        "github",
-        "subfolder",
-        "repository",
-        "download",
-        "partial-clone",
-        "directory-download",
-        "folder-download",
-        "git-utilities",
-        "github-api",
-        "monorepo-tools",
-        "sparse-checkout",
-        "vite",
-        "react",
-        "boilerplate",
-        "generator",
-        "cli",
-        "scaffold"
-    ],
-    "author": "Adwait-Borate",
-    "license": "MIT",
-    "dependencies": {
-        "axios": "^1.6.7",
-        "chalk": "^4.1.2",
-        "chart.js": "^3.9.1",
-        "chartjs-node-canvas": "^4.1.6",
-        "cli-progress": "^3.12.0",
-        "commander": "^12.1.0",
-        "fs-extra": "^11.2.0",
-        "inquirer": "^8.2.5",
-        "ora": "^5.4.1",
-        "p-limit": "^3.1.0",
-        "semver": "^7.5.4",
-        "table": "^6.8.1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Adwait-Borate/git-bro.git"
-    },
-    "bugs": {
-        "url": "https://github.com/Adwait-Borate/git-bro/issues"
-    },
-    "homepage": "https://github.com/Adwait-Borate/git-bro",
-    "engines": {
-        "node": ">=14.0.0"
-    },
-    "files": [
-        "bin/",
-        "src/",
-        "LICENSE"
-    ],
-    "publishConfig": {
-        "access": "public"
-    }
+  "name": "git-bro",
+  "version": "1.1.2",
+  "description": "CLI tool that lets you download specific folders from GitHub repositories without cloning the entire repo.",
+  "main": "src/index.js",
+  "bin": {
+    "git-bro": "./bin/git-bro.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node bin/git-bro.js",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "git",
+    "github",
+    "repository",
+    "insights",
+    "audit",
+    "commits",
+    "dependencies",
+    "cli",
+    "git-analysis",
+    "git-history",
+    "git-tools",
+    "github-cli",
+    "open-source",
+    "repo-analysis",
+    "repository-insights",
+    "developer-tools",
+    "version-control"
+  ],
+  "author": "Adwait-Borate",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "chalk": "^4.1.2",
+    "chart.js": "^3.9.1",
+    "chartjs-node-canvas": "^4.1.6",
+    "cli-progress": "^3.12.0",
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^8.2.5",
+    "ora": "^5.4.1",
+    "p-limit": "^3.1.0",
+    "semver": "^7.5.4",
+    "table": "^6.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adwait-Borate/git-bro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Adwait-Borate/git-bro/issues"
+  },
+  "homepage": "https://github.com/Adwait-Borate/git-bro",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
